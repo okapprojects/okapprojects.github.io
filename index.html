@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Haiticloud</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        #map {
+            height: 100%;
+            background: #000;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="map" style="width:100%"></div>
+
+    <script>
+        var map = L.map('map').setView([18.917, -72.170], 8);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 15,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var cap_haitian_marker = L.marker([19.736514133719524, -72.20381104199498]).addTo(map);
+        cap_haitian_marker.bindPopup('<iframe src="https://www.google.com/maps/d/embed?mid=1QcY2K38y2VmNW1BwMZlEAXoBI4C7bh0&ehbc=2E312F" width="640" height="480"></iframe>"');
+
+        cap_haitian_marker.bindLabel('Cap-Haitian Solar Lamp Project', { noHide: true }).addTo(map);
+
+        
+    </script>
+</body>
+
+</html>
