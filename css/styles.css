@@ -147,6 +147,14 @@ h3, .h3 {
   }
 }
 
+.tx-center-title {
+    text-align: center;
+    font-size: 42px;
+    line-height: 46px;
+    margin-bottom: 44px;
+    font-weight: bold;
+}
+
 h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);
 }
